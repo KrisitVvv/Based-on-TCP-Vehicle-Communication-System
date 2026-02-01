@@ -77,13 +77,13 @@ We use YOLO to recongnize the pedestrian in lab,it's effect is nice.
 In order to prevent excessive warning messages from being generated due to repeated identifications of the same pedestrian, we adopted an algorithm to mark individuals with an ID as identifiers.  
 
 From the front vehicle message,it's successful to receive the warning message and transmit to the following vehicle.  
-<p align="center"><img width="849" height="330" src="https://github.com/user-attachments/assets/0952e8f4-1822-4c52-85f1-bd3ab8371d3e" />  
+<p align="center"><img width="849" height="330" src="https://github.com/user-attachments/assets/0952e8f4-1822-4c52-85f1-bd3ab8371d3e" /></p>  
 In the following vehicle,it's successful to receive the warning message and respond.  
-<p align="center"><img width="746" height="277" src="https://github.com/user-attachments/assets/d24a6806-a60b-4507-842e-54022a0fe3fe" />
+<p align="center"><img width="746" height="277" src="https://github.com/user-attachments/assets/d24a6806-a60b-4507-842e-54022a0fe3fe" /></p>
 
 ### In the real scene
 In the real scene,the camera can recognize the pedestrian and the vehicle can receive the warning message and respond.  
-<img width="529" height="477" src="https://github.com/user-attachments/assets/44ef1ae7-1225-40c5-87bc-6b67d97f047b" />
+<p align="center"><img width="529" height="477" src="https://github.com/user-attachments/assets/44ef1ae7-1225-40c5-87bc-6b67d97f047b" /></p>
 
 ## How to improve
 1.During our use, we found that the video transmit to vehicle,video's RGB is faulty.You can try to solve it.  
