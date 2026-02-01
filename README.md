@@ -36,7 +36,7 @@ WIDTH = 1280 # vedio width
 HEIGHT = 720 # vedio height
 FPS = 30 # vedio FPS
 ```
-## Usage
+## Running
 ### Computer
 Prepare your camera and the corresponding driver.  
 Open file **RSU_Send_Video.py** line 20-21 to change front vehicle's ip address and port.  
