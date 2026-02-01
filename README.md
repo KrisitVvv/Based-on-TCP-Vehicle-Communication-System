@@ -1,7 +1,7 @@
 # <p align="center"> Based on TCP Vehicle Communication System </p>
 ## Introduction
 This project is based on TCP or UDP agreement to achieve vehicle to vehicle and vehicle to infrastructure communication.This is my University course work,it's have any problems,you can try to solve it.
-## Information
+## Usage
 This project is sloved in scenarios where the A-pillar of a vehicle or roadside parking causes a blind spot,a pedestrian suddenly appears in the driving path,how to avoid the collision?  
 
 We simulation the roadside camera and two vehicle in pedestrian appers in the road.Firstly,we use a camera to capture the video,and accross YOLOv5 to recognize the pedestrian or motocycle.If the pedestrian or motocycle appears in the road,computer will send a warning to all vehicles within the range,the vehicle received the warning,and the vehicle will emergency stop.Besides that,we consider the front vehicle have emergency stop,the following vehicle not in the broadcast range,so the following vehicle have a risk of rear-end collision.To solve this problem, we introduced the vehicle to vehicle communication system.The system not only in the one scenarios applicable,but also in any front vehicle emergency stop to avoid the collision.  
