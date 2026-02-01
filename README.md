@@ -4,12 +4,12 @@ This project is based on TCP or UDP agreement to achieve vehicle to vehicle and 
 ## Information
 This project is sloved in scenarios where the A-pillar of a vehicle or roadside parking causes a blind spot,a pedestrian suddenly appears in the driving path,how to avoid the collision?  
 
-We similation the roadside camera and two vihicle in pedestrian appers in the road.Firstly,we use a camera to capture the video,and accross YOLOv5 to recognize the pedestrian or motocycle.If the pedestrian or motocycle appears in the road,computer will send a warning to all vehicles within the range,the vehicle received the warning,and the vehicle will emergency stop.Besides that,we consider the front vehicle have emergency stop,the following vehicle not in the broadcast range,so the following vehicle have a risk of rear-end collision.To solve this problem, we introduced the vehicle to vehicle communication system.The system not only in the one scenarios applicable,but also in any front vehicle emergency stop to avoid the collision.  
+We simulation the roadside camera and two vehicle in pedestrian appers in the road.Firstly,we use a camera to capture the video,and accross YOLOv5 to recognize the pedestrian or motocycle.If the pedestrian or motocycle appears in the road,computer will send a warning to all vehicles within the range,the vehicle received the warning,and the vehicle will emergency stop.Besides that,we consider the front vehicle have emergency stop,the following vehicle not in the broadcast range,so the following vehicle have a risk of rear-end collision.To solve this problem, we introduced the vehicle to vehicle communication system.The system not only in the one scenarios applicable,but also in any front vehicle emergency stop to avoid the collision.  
 <p align="center"> <img width="525" height="344" src="https://github.com/user-attachments/assets/e95dbd17-36e3-4335-b0be-09716dfc0b50"/> </p>
 
 ## Environment
 ### Software and Hardware
-We develop this project in a PC and two Songling Vehicle.The vehicle is equipped with a NVIDIA Jetson AGX Xavier,running Ubuntu 18.04.  
+We develop this project in a PC and two Songling Vehicle.The vehicle is equipped with a NVIDIA Jetson AGX Xavier,and running Ubuntu 18.04.  
 
 We use Conda to manage our software environment.In the project,we use Python and **yolov5** to achieve the vehicle detection.If you want to reproduce this repository,you can follow the steps below:  
 * Computer Environment:  
@@ -28,7 +28,7 @@ conda install -c conda-forge opencv-python -y
 ```
 This project Demo is using external camera,we use a USB camera to capture the video,you can try to use computer camera or internet camera to achieve the same effect.
 ### Internet
-This project need to computer transmit video to vehicle,therefore,network bondwidth is important.During our experiment,we use WIFI to connect computer and vehicle,at the beginning,we pursued longer transmission distances selected 2.4GHz WIFI,but the bondwidth is not enough,causes the video to be very laggy.In the end, we solved this problem by using **5GHz WiFi**.  
+This project need to computer transmit video to vehicle,therefore,network bondwidth is important.During our experiment,we use WIFI to connect computer and vehicle,at the beginning,we pursued longer transmission distances selected 2.4GHz WIFI,but the network bondwidth is not enough,causes the video to be very laggy.In the end, we solved this problem by using **5GHz WiFi**.  
 
 If you experimental environment have to 2.4GHz WIFI,you can modify the file **RSU_Send_Video.py** line 25-27 to change the vedio quality.
 ```python
@@ -67,7 +67,8 @@ conda activate tcp_receive
 python TCP_Receive_Vehicle_Message.py
 ```
 ### By the way
-You'd better to firstly running folowing vehicle,front vehicle and then running computer.In any special situations,not follow the order of running,you may have some problems.
+You'd better to firstly running folowing vehicle,front vehicle and then running computer.In some special situations,not follow the order of running,you may have some problems.  
+If you don't know how to get ip address,you can in Songling vehicle System running order `ifconfig` to find.
 ## Effect
 ### YOLO Verify
 We use YOLO to recongnize the pedestrian in lab,it's effect is nice.  
