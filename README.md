@@ -1,11 +1,11 @@
-# <p style="align:center"> Based on TCP Vehicle Communication System </p>
+# <p align="center"> Based on TCP Vehicle Communication System </p>
 ## Introduction
 This project is based on TCP or UDP agreement to achieve vehicle to vehicle and vehicle to infrastructure communication.This is my University course work,it's have any problems,you can try to solve it.
 ## Information
 This project is sloved in scenarios where the A-pillar of a vehicle or roadside parking causes a blind spot,a pedestrian suddenly appears in the driving path,how to avoid the collision?  
 
 We similation the roadside camera and two vihicle in pedestrian appers in the road.Firstly,we use a camera to capture the video,and accross YOLOv5 to recognize the pedestrian or motocycle.If the pedestrian or motocycle appears in the road,computer will send a warning to all vehicles within the range,the vehicle received the warning,and the vehicle will emergency stop.Besides that,we consider the front vehicle have emergency stop,the following vehicle not in the broadcast range,so the following vehicle have a risk of rear-end collision.To solve this problem, we introduced the vehicle to vehicle communication system.The system not only in the one scenarios applicable,but also in any front vehicle emergency stop to avoid the collision.  
-<p style="align:center"> <img width="525" height="344" src="https://github.com/user-attachments/assets/e95dbd17-36e3-4335-b0be-09716dfc0b50"/> </p>
+<p align="center"> <img width="525" height="344" src="https://github.com/user-attachments/assets/e95dbd17-36e3-4335-b0be-09716dfc0b50"/> </p>
 
 ## Environment
 ### Software and Hardware
@@ -71,15 +71,15 @@ You'd better to firstly running folowing vehicle,front vehicle and then running 
 ## Effect
 ### YOLO Verify
 We use YOLO to recongnize the pedestrian in lab,it's effect is nice.  
-<p style="align:center"> <img width="577" height="327" src="https://github.com/user-attachments/assets/c1e1deda-075a-48c5-9d87-44b170ef2313" /></p>
+<p align="center"> <img width="577" height="327" src="https://github.com/user-attachments/assets/c1e1deda-075a-48c5-9d87-44b170ef2313" /></p>
 
 ### Communication Verify
 In order to prevent excessive warning messages from being generated due to repeated identifications of the same pedestrian, we adopted an algorithm to mark individuals with an ID as identifiers.  
 
 From the front vehicle message,it's successful to receive the warning message and transmit to the following vehicle.  
-<img width="849" height="330" src="https://github.com/user-attachments/assets/0952e8f4-1822-4c52-85f1-bd3ab8371d3e" />  
+<p align="center"><img width="849" height="330" src="https://github.com/user-attachments/assets/0952e8f4-1822-4c52-85f1-bd3ab8371d3e" />  
 In the following vehicle,it's successful to receive the warning message and respond.  
-<img width="746" height="277" src="https://github.com/user-attachments/assets/d24a6806-a60b-4507-842e-54022a0fe3fe" />
+<p align="center"><img width="746" height="277" src="https://github.com/user-attachments/assets/d24a6806-a60b-4507-842e-54022a0fe3fe" />
 
 ### In the real scene
 In the real scene,the camera can recognize the pedestrian and the vehicle can receive the warning message and respond.  
